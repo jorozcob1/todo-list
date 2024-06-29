@@ -1,0 +1,28 @@
+<section>
+    <h2>Lista de tareas</h2>
+    <app-agregar-tarea [agregartareasRecibidas]="tareas" [indexRecibido]="index"></app-agregar-tarea>
+    <hr />
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Tarea</th>
+                    <th>Estado</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let tarea of tareas; let i = index">
+                    <td>{{ tarea.id }}</td>
+                    <td [class.completada]="tarea.completada">{{ tarea.tarea }}</td>
+                    <td><button (click)="cambiarEstado(i)">Cambiar</button></td>
+                    <td>
+                        <app-eliminar-tarea [eliminarTareaRecibida]="tareas" [recibirIndex]="i"></app-eliminar-tarea>
+                        <button (click)="recibirIndex(i)">Editar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>

@@ -1,0 +1,11 @@
+h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.completada {
+    text-decoration: line-through;
+    color: #d44848;
+}

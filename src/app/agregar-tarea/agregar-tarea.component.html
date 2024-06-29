@@ -1,0 +1,15 @@
+<section class="center">
+    <form (ngSubmit)="agregarTarea()">
+        <input type="text" placeholder="Agregar tarea" name="nuevaTarea" [(ngModel)]="nuevaTarea" />
+        <button type="submit" [value]="'save'" #action>
+      {{ btn ? "Guardar" : "Editar" }}
+    </button>
+    </form>
+</section>
+<ul>
+    <li *ngFor="let tarea of agregartareasRecibidas; let i = index">
+        <span [class.completada]="tarea.completada">{{ tarea.tarea }}</span>
+    </li>
+    <li>{{ indexRecibido }}</li>
+    <li>{{ btn }}</li>
+</ul>

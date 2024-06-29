@@ -1,0 +1,27 @@
+.center {
+    text-align: center;
+    align-items: self-end;
+    margin-top: 20px;
+}
+
+.center input,
+button {
+    margin: 10px;
+}
+
+.center button {
+    background-color: darkcyan;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.center button:hover {
+    background-color: darkslategray;
+}
+
+.edit {
+    display: none;
+}
